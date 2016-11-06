@@ -1,4 +1,98 @@
-syntax on
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
-" Wrap gitcommit file types at the appropriate length
-filetype indent plugin on
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'plasticboy/vim-markdown'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-rake'
+Plugin 'tpope/vim-cucumber'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-vinegar'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+runtime macros/matchit.vim
+
+set title
+set hidden
+set updatetime=250
+let g:gitgutter_max_signs = 500
+
+" Numbers "
+set number
+set numberwidth=4
+set ruler
+
+exe "set path=".expand("$PATH")
+
+set mousehide                                           " Hide the mouse cursor when typing
+set mouse=a
+
+" disable cursor keys in normal mode
+map <Left>  :echo "no! use h!"<cr>
+map <Down>  :echo "no! use j!"<cr>
+map <Up>    :echo "no! use k!"<cr>
+map <Right> :echo "no! use l!"<cr>
+
+" Encoding "
+set encoding=utf-8
+set termencoding=utf-8
+
+" Search Options "
+set hlsearch   " Highlight search
+set incsearch  " Incremental search
+set magic      " Set magic on, for regular expressions
+set ignorecase " Searches are Non Case-sensitive
+set smartcase
+
+set wrap	" Soft Wrap in all files, while hard wrap can be allow by filetype
+set linebreak " It maintains the whole words when wrapping
+
+set mouse= " Disable the use of the mouse
+
+" Delete empty space from the end of lines on every save
+autocmd BufWritePre * :%s/\s\+$//e
+
+" Nerd tree "
+map <C-n> :NERDTreeToggle<CR>
+
+" Indentation "
+set autoindent
+set cindent
+set smartindent
+
+syntax enable
+set nomodeline
+set backspace=indent,eol,start                          " Backspace will delete EOL chars, as well as indents
+set matchpairs+=<:>                                     " For characters that forms pairs for using % commands, this is for HTML Tags
+set shortmess=atToOI                                    " To avoid the 'Hit Enter' prompts caused by the file messages
+set iskeyword+=_,$,@,%,#                                " Keywords are use to searching and recognized with many commands
+set history=1000
+set undolevels=1000
+set confirm
+set updatetime=1500
+
+" Color column at 80
+set colorcolumn=80
+
+" Tab Options "
+set shiftwidth=2
+set tabstop=2
+set expandtab
