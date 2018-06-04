@@ -24,12 +24,17 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'fatih/vim-go'
+Plugin 'pangloss/vim-javascript'  " JavaScript syntax
+Plugin 'mxw/vim-jsx'              " JSX syntax
+Plugin 'darthmall/vim-vue'            " Vue.js syntax
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 runtime macros/matchit.vim
+
+let g:jsx_ext_required = 0 " enable JSX syntax highlight in .js files
 
 set title
 set hidden
@@ -70,6 +75,9 @@ set mouse= " Disable the use of the mouse
 
 " Delete empty space from the end of lines on every save
 autocmd BufWritePre * :%s/\s\+$//e
+
+" Restrict trailing whitespace removal to listed file types only "
+" autocmd FileType c,cpp,java,php autocmd BufWritePre <buffer> %s/\s\+$//e "
 
 " Nerd tree "
 map <C-n> :NERDTreeToggle<CR>
