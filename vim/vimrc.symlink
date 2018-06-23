@@ -105,3 +105,6 @@ set colorcolumn=80
 set shiftwidth=2
 set tabstop=2
 set expandtab
+
+" Makrdown options "
+let g:vim_markdown_folding_disabled = 1
