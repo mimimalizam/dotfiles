@@ -23,10 +23,11 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'fatih/vim-go'
-Plugin 'pangloss/vim-javascript'  " JavaScript syntax
-Plugin 'mxw/vim-jsx'              " JSX syntax
-Plugin 'darthmall/vim-vue'            " Vue.js syntax
+Plugin 'fatih/vim-go'              " Go syntax
+Plugin 'elixir-editors/vim-elixir' " Elixir syntax
+Plugin 'pangloss/vim-javascript'   " JavaScript syntax
+Plugin 'mxw/vim-jsx'               " JSX syntax
+Plugin 'darthmall/vim-vue'         " Vue.js syntax
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
