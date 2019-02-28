@@ -88,6 +88,9 @@ set autoindent
 set cindent
 set smartindent
 
+" HTML ident"
+autocmd FileType html setlocal shiftwidth=2 tabstop=2
+
 syntax enable
 set nomodeline
 set backspace=indent,eol,start                          " Backspace will delete EOL chars, as well as indents
