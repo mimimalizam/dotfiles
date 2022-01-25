@@ -30,26 +30,7 @@ export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
-
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
-### Added by the Heroku Toolbelt
-export PATH="~/.rbenv/shims:/usr/local/heroku/bin:$PATH"
-
-alias dbundle='BUNDLE_TRAMPOLINE_DISABLE=1 ruby -I ~/bundler/lib ~/bundler/exe/bundle'
-
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
-### Added by the Heroku Toolbelt
-export PATH="~/.rbenv/shims:/usr/local/heroku/bin:$PATH"
-
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
-export PATH="/home/vagrant/anaconda2/bin:$PATH"
-export PATH="$HOME/.cargo/bin:$PATH"
-
-export GOROOT=$HOME/go-projects/go
-export GOPATH=$GOROOT/bin
-export PATH=$PATH:$GOPATH
+export PATH=$HOME/opt/python-3.9.9/bin:$PATH
+# export GOROOT=$HOME/go-projects/go
+# export GOPATH=$GOROOT/bin
+# export PATH=$PATH:$GOPATH
